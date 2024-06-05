@@ -5,6 +5,7 @@ import lombok.Getter;
 
 public abstract class Posion {
     protected String nombre;
+    protected @Getter(AccessLevel.PUBLIC) String descripcion;
     protected int tiempoEfecto;
     protected int porcentajeDeDano;
     protected int tiempoEfectuado;
