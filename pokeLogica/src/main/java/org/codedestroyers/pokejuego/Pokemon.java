@@ -16,6 +16,8 @@ public class Pokemon {
     private @Getter(AccessLevel.PUBLIC) String imagenBatalla;
 
     //TODO: Constructor
+    public Pokemon() {
+    }
 
     public int golpear(Pokemon p) {
         //TODO
