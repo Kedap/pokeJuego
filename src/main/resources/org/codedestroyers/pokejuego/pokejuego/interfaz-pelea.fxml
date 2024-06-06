@@ -127,7 +127,17 @@
                   </VBox>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" onAction="#iniciarCombate" prefHeight="66.0" prefWidth="68.0" style="-fx-background-color: white; -fx-background-radius: 45px; -fx-border-radius: 45px; -fx-border-color: black;" text="Iniciar">
+            <Button mnemonicParsing="false" onAction="#iniciarCombate1" prefHeight="66.0" prefWidth="68.0" style="-fx-background-color: white; -fx-background-radius: 45px; -fx-border-radius: 45px; -fx-border-color: black;" text="1ro">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#iniciarCombate2" prefHeight="66.0" prefWidth="68.0" style="-fx-background-color: white; -fx-background-radius: 45px; -fx-border-radius: 45px; -fx-border-color: black;" text="2do">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#iniciarCombate3" prefHeight="66.0" prefWidth="68.0" style="-fx-background-color: white; -fx-background-radius: 45px; -fx-border-radius: 45px; -fx-border-color: black;" text="3er">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
