@@ -1,16 +1,16 @@
 package org.codedestroyers.pokejuego.posiones;
 
 public class PosionAturdidora extends Posion {
-    private int tiempoAturdicion;
+    private final int tiempoAturdicion;
 
     public PosionAturdidora(String nombre, int tiempoEfecto, int porcentajeDeDano, int tiempoAturdicion) {
-        super(nombre, tiempoEfecto, porcentajeDeDano);
+        super(nombre, tiempoEfecto, porcentajeDeDano * 2);
         this.tiempoAturdicion = tiempoAturdicion;
     }
 
-    // TODO: Escribir este método
     @Override
-    double obtenerDanoNuevo(double danoGolpe) {
-        return 0;
+    public double obtenerDanoNuevo(double danoGolpe) throws InterruptedException {
+        Thread.sleep(tiempoAturdicion * 100);
+        return (danoGolpe + (danoGolpe * (double) porcentajeDeDano) / 100);
     }
 }

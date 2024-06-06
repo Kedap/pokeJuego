@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PosionOrdinariaTest {
 
     @ParameterizedTest
-    @CsvSource({"100.0,90.0,10.0", "50.0,50.0,25.0", "10.0,20.0,8.0"})
+    @CsvSource({"100.0,90.0,190.0", "50.0,50.0,75.0", "10.0,20.0,12.0"})
     void obtenerDanoNuevo(double danoNomral, double danoPosion, double danoEsperado) {
         PosionOrdinaria po = new PosionOrdinaria("Posion Ordinaria", 5, (int) danoPosion);
         assertEquals(po.obtenerDanoNuevo(danoNomral), danoEsperado);

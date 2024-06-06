@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class PosionAturdidoraTest {
 
     @ParameterizedTest
-    @CsvSource({"100.0,90.0,10.0", "50.0,50.0,25.0", "10.0,20.0,8.0"})
-    void obtenerDanoNuevo(double danoNomral, double danoPosion, double danoEsperado) {
-        PosionAturdidora po = new PosionAturdidora("Posion Ordinaria", 5, (int) danoPosion,30);
+    @CsvSource({"100.0,90.0,280.0", "50.0,50.0,100.0", "10.0,20.0,14.0"})
+    void obtenerDanoNuevo(double danoNomral, double danoPosion, double danoEsperado) throws InterruptedException {
+        PosionAturdidora po = new PosionAturdidora("Posion Ordinaria", 1, (int) danoPosion,30);
         assertEquals(po.obtenerDanoNuevo(danoNomral), danoEsperado);
     }
 }

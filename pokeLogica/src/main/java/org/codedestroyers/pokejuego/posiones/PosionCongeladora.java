@@ -8,9 +8,9 @@ public class PosionCongeladora extends Posion {
         this.tiempoCongelacion = tiempoCongelacion;
     }
 
-    //TODO: Escribir este método
     @Override
-    double obtenerDanoNuevo(double danoGolpe) {
-        return 0;
+    public double obtenerDanoNuevo(double danoGolpe) throws InterruptedException {
+        Thread.sleep(tiempoCongelacion* 100);
+        return (danoGolpe + (danoGolpe * (double) porcentajeDeDano) / 100);
     }
 }

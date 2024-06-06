@@ -20,11 +20,11 @@ import java.util.List;
 
 public class Pokemon {
     private @Getter(AccessLevel.PUBLIC) String nombre;
-    private @Getter(AccessLevel.PUBLIC) int vida;
+    private @Getter(AccessLevel.PUBLIC) double vida;
     private @Setter(AccessLevel.PUBLIC) Posion posion;
     private boolean posionActiva;
-    private @Getter(AccessLevel.PUBLIC) int danoGolpe;
-    private @Getter(AccessLevel.PUBLIC) int defensa;
+    private @Getter(AccessLevel.PUBLIC) double danoGolpe;
+    private @Getter(AccessLevel.PUBLIC) double defensa;
     private @Getter(AccessLevel.PUBLIC) String imagenSeleccionada;
     private @Getter(AccessLevel.PUBLIC) String imagenBatalla;
 
@@ -53,18 +53,27 @@ public class Pokemon {
         defensa = stats.get(2).getBaseStat();
     }
 
-    public int golpear(Pokemon p) {
-        //TODO
-        return 0;
+    // El otro Pokemon recibe el golpe
+    public double golpear(Pokemon p) {
+        if (posionActiva) {
+            try {
+                return p.recibirGolpe(posion.obtenerDanoNuevo(danoGolpe));
+            } catch (InterruptedException e) {
+                return p.recibirGolpe(danoGolpe);
+            }
+        } else {
+            return p.recibirGolpe(danoGolpe);
+        }
     }
 
-    public int recibirGolpe(int dano) {
-        //TODO
-        return 0;
+    public double recibirGolpe(double dano) {
+        double danoFinal = dano - defensa;
+        if (danoFinal >= 0) vida -= (dano - defensa);
+        return dano;
     }
 
     public void tomarPosion() {
-        //TODO
+        posionActiva = true;
     }
 
     public boolean haPerdido() {
