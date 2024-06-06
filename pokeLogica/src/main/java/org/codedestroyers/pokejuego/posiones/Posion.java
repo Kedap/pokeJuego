@@ -4,10 +4,10 @@ import lombok.AccessLevel;
 import lombok.Getter;
 
 public abstract class Posion {
-    protected String nombre;
+    protected @Getter(AccessLevel.PUBLIC)String nombre;
     protected @Getter(AccessLevel.PUBLIC) String descripcion;
-    protected int tiempoEfecto;
-    protected int porcentajeDeDano;
+    protected @Getter(AccessLevel.PUBLIC)int tiempoEfecto;
+    protected @Getter(AccessLevel.PUBLIC)int porcentajeDeDano;
     protected int tiempoEfectuado;
     protected @Getter(AccessLevel.PUBLIC) boolean terminoEfecto;
 
@@ -17,10 +17,6 @@ public abstract class Posion {
         this.porcentajeDeDano = porcentajeDeDano;
     }
 
-    public abstract double obtenerDanoNuevo(double danoGolpe);
-
-    public boolean GetTerminoEfecto() {
-        return (tiempoEfecto>tiempoEfectuado);
-    }
+    public abstract double obtenerDanoNuevo(double danoGolpe) throws InterruptedException;
 
 }

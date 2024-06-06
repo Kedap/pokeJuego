@@ -8,15 +8,9 @@ public class PosionCongeladora extends Posion {
         this.tiempoCongelacion = tiempoCongelacion;
     }
 
-    //TODO: Escribir este método
     @Override
-    public double obtenerDanoNuevo(double danoGolpe) {
+    public double obtenerDanoNuevo(double danoGolpe) throws InterruptedException {
+        Thread.sleep(tiempoCongelacion* 100);
         return (danoGolpe + (danoGolpe * (double) porcentajeDeDano) / 100);
-    }
-
-    public int tiempoCongelacion() throws InterruptedException {
-        Thread.sleep(tiempoCongelacion * 1000);
-        System.out.println("La posion "+nombre+" congelo por "+ tiempoCongelacion);
-        return 2;
     }
 }
