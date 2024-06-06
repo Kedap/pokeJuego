@@ -3,14 +3,7 @@ package org.codedestroyers.pokejuego;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
-import me.sargunvohra.lib.pokekotlin.client.ClientConfig;
-import me.sargunvohra.lib.pokekotlin.client.PokeApi;
-import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
-import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
-import okhttp3.HttpUrl;
 import org.codedestroyers.pokejuego.posiones.Posion;
-
-import java.util.concurrent.TimeUnit;
 
 public class Pokemon {
     private String nombre;
@@ -35,21 +28,28 @@ public class Pokemon {
 //        PokemonSpecies bulbasaur = cliente.getPokemonSpecies(1);
     }
 
-    public int golpear(Pokemon p) {
-        //TODO
-        return 0;
+    public double golpear(Pokemon p) {
+        if (posionActiva) {
+            return (posion.obtenerDanoNuevo(danoGolpe));
+        } else {
+            return danoGolpe;
+        }
     }
 
     public int recibirGolpe(int dano) {
-        //TODO
-        return 0;
-    }
+        if (posionActiva) {
+                dano = (int) (posion.obtenerDanoNuevo(danoGolpe) - defensa);
+            } else {
+                dano = danoGolpe;
+            }
+            vida = -dano;
+            return dano;
+        }
+        public void tomarPosion () {
+            posionActiva = true;
+        }
 
-    public void tomarPosion() {
-        //TODO
+        public boolean haPerdido () {
+            return vida <= 0;
+        }
     }
-
-    public boolean haPerdido() {
-        return vida <= 0;
-    }
-}

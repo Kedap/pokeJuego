@@ -17,5 +17,10 @@ public abstract class Posion {
         this.porcentajeDeDano = porcentajeDeDano;
     }
 
-    abstract double obtenerDanoNuevo(double danoGolpe);
+    public abstract double obtenerDanoNuevo(double danoGolpe);
+
+    public boolean GetTerminoEfecto() {
+        return (tiempoEfecto>tiempoEfectuado);
+    }
+
 }
