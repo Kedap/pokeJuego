@@ -6,6 +6,7 @@ import lombok.Setter;
 import me.sargunvohra.lib.pokekotlin.client.ClientConfig;
 import me.sargunvohra.lib.pokekotlin.client.PokeApi;
 import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
+import me.sargunvohra.lib.pokekotlin.model.PokemonSprites;
 import me.sargunvohra.lib.pokekotlin.model.PokemonStat;
 import org.codedestroyers.pokejuego.excepciones.NoSeEncontroElPokemon;
 import org.codedestroyers.pokejuego.posiones.Posion;
@@ -48,9 +49,12 @@ public class Pokemon {
         me.sargunvohra.lib.pokekotlin.model.Pokemon pokemonRespuesta = pokeApi.getPokemon(id);
         this.nombre = nombre;
         List<PokemonStat> stats = pokemonRespuesta.getStats();
+        PokemonSprites imagenes = pokemonRespuesta.getSprites();
         vida = stats.getFirst().getBaseStat();
         danoGolpe = stats.get(1).getBaseStat();
         defensa = stats.get(2).getBaseStat();
+        imagenBatalla = imagenes.getFrontDefault();
+        imagenSeleccionada= imagenes.getFrontShiny();
     }
 
     // El otro Pokemon recibe el golpe

@@ -3,7 +3,6 @@ package org.codedestroyers.pokejuego;
 import me.sargunvohra.lib.pokekotlin.client.ClientConfig;
 import okhttp3.HttpUrl;
 import org.codedestroyers.pokejuego.excepciones.NoSeEncontroElPokemon;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;

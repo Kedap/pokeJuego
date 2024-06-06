@@ -1,5 +1,7 @@
 plugins {
     id("java")
+    id("org.jetbrains.kotlin.jvm") version "2.0.0"
+    id("org.javamodularity.moduleplugin") version "1.8.12"
 }
 
 group = "org.codedestroyers.pokejuego"
@@ -29,3 +31,5 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+modularity.patchModule("java.annotation", "jsr305-3.0.2.jar")
