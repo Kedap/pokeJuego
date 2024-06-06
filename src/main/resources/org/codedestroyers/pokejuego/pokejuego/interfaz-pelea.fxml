@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="567.0" prefWidth="470.0">
@@ -53,6 +52,11 @@
                            </font>
                         </Label>
                         <Label prefHeight="31.0" prefWidth="190.0" text="Defensa:">
+                           <font>
+                              <Font name="Arial" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="31.0" prefWidth="190.0" text="Posion:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
@@ -114,6 +118,11 @@
                            </font>
                         </Label>
                         <Label prefHeight="31.0" prefWidth="190.0" text="Defensa:">
+                           <font>
+                              <Font name="Arial" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="31.0" prefWidth="190.0" text="Posion:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
