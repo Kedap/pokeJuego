@@ -1,6 +1,7 @@
 package org.codedestroyers.pokejuego.posiones;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -14,5 +15,24 @@ class PosionOrdinariaTest {
     void obtenerDanoNuevo(double danoNomral, double danoPosion, double danoEsperado) {
         PosionOrdinaria po = new PosionOrdinaria("Posion Ordinaria", 5, (int) danoPosion);
         assertEquals(po.obtenerDanoNuevo(danoNomral), danoEsperado);
+    }
+
+    @ParameterizedTest
+    @Timeout(5)
+    @ValueSource(ints = {1,10,3})
+    void checarTurnos(int tiempoEfecto) {
+        PosionOrdinaria po = new PosionOrdinaria("Posion Ordinaria", tiempoEfecto,2);
+        int dano = 100;
+        int i = 0;
+        while (po.isContinuaEfecto()) {
+            double otro= po.obtenerDanoNuevo(100);
+            if (dano == otro) {
+                fail("El daño no puede ser el mismo con la posion activada");
+            }
+            i++;
+        }
+        if (i!=tiempoEfecto+1) {
+            fail("Se necesitaron mas del tiempo establecido de la duracion de la posion");
+        }
     }
 }

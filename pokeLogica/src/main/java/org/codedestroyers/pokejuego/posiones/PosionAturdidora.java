@@ -11,6 +11,7 @@ public class PosionAturdidora extends Posion {
     @Override
     public double obtenerDanoNuevo(double danoGolpe) throws InterruptedException {
         Thread.sleep(tiempoAturdicion * 100);
+        efectuarTurno();
         return (danoGolpe + (danoGolpe * (double) porcentajeDeDano) / 100);
     }
 }

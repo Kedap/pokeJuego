@@ -7,6 +7,7 @@ public class PosionOrdinaria extends Posion {
 
     @Override
     public double obtenerDanoNuevo(double danoGolpe) {
+        efectuarTurno();
         return danoGolpe + (danoGolpe * ((double) porcentajeDeDano / 100));
     }
 }

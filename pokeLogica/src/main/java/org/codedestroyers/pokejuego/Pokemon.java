@@ -55,15 +55,18 @@ public class Pokemon {
 
     // El otro Pokemon recibe el golpe
     public double golpear(Pokemon p) {
+        double dano;
         if (posionActiva) {
             try {
-                return p.recibirGolpe(posion.obtenerDanoNuevo(danoGolpe));
+                dano =p.recibirGolpe(posion.obtenerDanoNuevo(danoGolpe));
             } catch (InterruptedException e) {
-                return p.recibirGolpe(danoGolpe);
+                dano= p.recibirGolpe(danoGolpe);
             }
+            posionActiva = posion.isContinuaEfecto();
         } else {
-            return p.recibirGolpe(danoGolpe);
+            dano= p.recibirGolpe(danoGolpe);
         }
+        return dano;
     }
 
     public double recibirGolpe(double dano) {

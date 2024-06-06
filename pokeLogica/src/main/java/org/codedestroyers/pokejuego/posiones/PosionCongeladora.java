@@ -11,6 +11,7 @@ public class PosionCongeladora extends Posion {
     @Override
     public double obtenerDanoNuevo(double danoGolpe) throws InterruptedException {
         Thread.sleep(tiempoCongelacion* 100);
+        efectuarTurno();
         return (danoGolpe + (danoGolpe * (double) porcentajeDeDano) / 100);
     }
 }

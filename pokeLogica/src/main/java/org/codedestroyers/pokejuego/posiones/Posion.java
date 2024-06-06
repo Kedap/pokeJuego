@@ -9,12 +9,18 @@ public abstract class Posion {
     protected @Getter(AccessLevel.PUBLIC)int tiempoEfecto;
     protected @Getter(AccessLevel.PUBLIC)int porcentajeDeDano;
     protected int tiempoEfectuado;
-    protected @Getter(AccessLevel.PUBLIC) boolean terminoEfecto;
+    protected @Getter(AccessLevel.PUBLIC) boolean continuaEfecto;
 
     public Posion(String nombre, int tiempoEfecto, int porcentajeDeDano) {
         this.nombre = nombre;
         this.tiempoEfecto = tiempoEfecto;
         this.porcentajeDeDano = porcentajeDeDano;
+        continuaEfecto = true;
+    }
+
+    protected void efectuarTurno() {
+        tiempoEfectuado++;
+        continuaEfecto = tiempoEfectuado <= tiempoEfecto;
     }
 
     public abstract double obtenerDanoNuevo(double danoGolpe) throws InterruptedException;
