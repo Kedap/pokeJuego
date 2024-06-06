@@ -1,16 +1,22 @@
 package org.codedestroyers.pokejuego.pokejuego;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import me.sargunvohra.lib.pokekotlin.client.ClientConfig;
 import okhttp3.HttpUrl;
 import org.codedestroyers.pokejuego.Pokemon;
 import org.codedestroyers.pokejuego.excepciones.NoSeEncontroElPokemon;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -110,5 +116,22 @@ public class HelloController {
             alerta.setContentText("No se encontro " + segundoBuscador.getText());
             alerta.show();
         }
+    }
+
+    @FXML
+    protected void salir() throws IOException {
+        System.out.println("Si");
+        Stage stage =(Stage) botonJugar.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("interfaz-pelea.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 940, 860);
+        stage.setTitle("PokaJuego!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void porfavor() {
+        System.out.println("Si");
     }
 }

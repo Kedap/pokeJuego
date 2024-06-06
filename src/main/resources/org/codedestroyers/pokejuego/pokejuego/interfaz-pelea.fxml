@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.codedestroyers.pokejuego.pokejuego.ControladorPelea">
    <children>
       <VBox prefHeight="567.0" prefWidth="470.0">
          <children>
             <HBox prefHeight="108.0" prefWidth="470.0" />
             <HBox alignment="CENTER" prefHeight="108.0" prefWidth="470.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" style="-fx-background-color: whtie; -fx-border-color: black;" text="Tomar Posion">
+                  <Button fx:id="ejecutarPosion1" mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" style="-fx-background-color: whtie; -fx-border-color: black;" text="Tomar Posion">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>
@@ -81,7 +81,7 @@
             <HBox prefHeight="108.0" prefWidth="470.0" />
             <HBox alignment="CENTER" prefHeight="108.0" prefWidth="470.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" style="-fx-background-color: whtie; -fx-border-color: black;" text="Tomar Posion">
+                  <Button fx:id="ejecutarPosionDo" mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" style="-fx-background-color: whtie; -fx-border-color: black;" text="Tomar Posion">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>

@@ -58,7 +58,7 @@
                   </VBox>
                   <VBox prefHeight="94.0" prefWidth="357.0">
                      <children>
-                        <Button fx:id="botonJugar" disable="true" mnemonicParsing="false" prefHeight="110.0" prefWidth="357.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 50px; -fx-border-radius: 50px;" text="JUGAR!!!">
+                        <Button fx:id="botonJugar" disable="true" mnemonicParsing="false" onAction="#salir" prefHeight="110.0" prefWidth="357.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 50px; -fx-border-radius: 50px;" text="JUGAR!!!">
                            <font>
                               <Font name="Arial" size="23.0" />
                            </font>
