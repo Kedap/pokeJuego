@@ -3,14 +3,7 @@ package org.codedestroyers.pokejuego;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
-import me.sargunvohra.lib.pokekotlin.client.ClientConfig;
-import me.sargunvohra.lib.pokekotlin.client.PokeApi;
-import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
-import me.sargunvohra.lib.pokekotlin.model.PokemonSpecies;
-import okhttp3.HttpUrl;
 import org.codedestroyers.pokejuego.posiones.Posion;
-
-import java.util.concurrent.TimeUnit;
 
 public class Pokemon {
     private String nombre;
