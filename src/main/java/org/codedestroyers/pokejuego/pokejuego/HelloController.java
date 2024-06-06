@@ -121,8 +121,10 @@ public class HelloController {
     @FXML
     protected void salir() throws IOException {
         System.out.println("Si");
-        Stage stage =(Stage) botonJugar.getScene().getWindow();
+        Stage stage = (Stage) botonJugar.getScene().getWindow();
         stage.close();
+        ListaPokemones lista = ListaPokemones.obtenerInstancia();
+        lista.setJugadores(pokemonesJugador1, pokemonesJugador2);
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("interfaz-pelea.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 940, 860);
         stage.setTitle("PokaJuego!");

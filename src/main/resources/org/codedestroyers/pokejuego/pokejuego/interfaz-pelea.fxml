@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.codedestroyers.pokejuego.pokejuego.ControladorPelea">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="778.0" prefWidth="1290.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.codedestroyers.pokejuego.pokejuego.ControladorPelea">
    <children>
-      <VBox prefHeight="567.0" prefWidth="470.0">
+      <VBox prefHeight="778.0" prefWidth="617.0">
          <children>
             <HBox prefHeight="108.0" prefWidth="470.0" />
             <HBox alignment="CENTER" prefHeight="108.0" prefWidth="470.0">
@@ -22,11 +22,11 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="211.0" prefWidth="470.0">
+            <HBox alignment="CENTER" prefHeight="452.0" prefWidth="617.0">
                <children>
-                  <ImageView fitHeight="287.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgPrimerJugador" fitHeight="287.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" />
+                        <Image url="https:///PokeAPI/sprites/master/sprites/pokemon/25.png" />
                      </image>
                   </ImageView>
                   <VBox prefHeight="283.0" prefWidth="185.0">
@@ -36,27 +36,27 @@
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label alignment="TOP_LEFT" prefHeight="96.0" prefWidth="189.0" text="Pokemon: ">
+                        <Label fx:id="j1NombrePokemon" alignment="TOP_LEFT" prefHeight="139.0" prefWidth="185.0" text="Pokemon: ">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Vida:">
+                        <Label fx:id="j1Vida" prefHeight="31.0" prefWidth="190.0" text="Vida:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Daño:">
+                        <Label fx:id="j1Dano" prefHeight="31.0" prefWidth="190.0" text="Daño:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Defensa:">
+                        <Label fx:id="j1Defensa" prefHeight="31.0" prefWidth="190.0" text="Defensa:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Posion:">
+                        <Label fx:id="j1Posion" prefHeight="31.0" prefWidth="185.0" text="Posion:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
@@ -67,16 +67,16 @@
             </HBox>
          </children>
       </VBox>
-      <VBox prefHeight="613.0" prefWidth="38.0">
+      <VBox prefHeight="778.0" prefWidth="51.0">
          <children>
-            <Label prefHeight="605.0" prefWidth="37.0" text="VS" textFill="#d32c2c">
+            <Label fx:id="marcador" prefHeight="555.0" prefWidth="214.0" text="VS" textFill="#d32c2c">
                <font>
                   <Font name="Arial" size="27.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <VBox prefHeight="567.0" prefWidth="470.0">
+      <VBox prefHeight="778.0" prefWidth="616.0">
          <children>
             <HBox prefHeight="108.0" prefWidth="470.0" />
             <HBox alignment="CENTER" prefHeight="108.0" prefWidth="470.0">
@@ -88,13 +88,9 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="211.0" prefWidth="470.0">
+            <HBox alignment="CENTER" prefHeight="428.0" prefWidth="616.0">
                <children>
-                  <ImageView fitHeight="287.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" />
-                     </image>
-                  </ImageView>
+                  <ImageView fx:id="imgSegundoJugador" fitHeight="287.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true" />
                   <VBox prefHeight="283.0" prefWidth="185.0">
                      <children>
                         <Label text="Jugador 2">
@@ -102,27 +98,27 @@
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label alignment="TOP_LEFT" prefHeight="96.0" prefWidth="189.0" text="Pokemon: ">
+                        <Label fx:id="j2NombrePokemon" alignment="TOP_LEFT" prefHeight="96.0" prefWidth="189.0" text="Pokemon: ">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Vida:">
+                        <Label fx:id="j2Vida" prefHeight="31.0" prefWidth="190.0" text="Vida:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Daño:">
+                        <Label fx:id="j2Dano" prefHeight="31.0" prefWidth="190.0" text="Daño:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Defensa:">
+                        <Label fx:id="j2Defensa" prefHeight="31.0" prefWidth="190.0" text="Defensa:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="31.0" prefWidth="190.0" text="Posion:">
+                        <Label fx:id="j2Posion" prefHeight="31.0" prefWidth="190.0" text="Posion:">
                            <font>
                               <Font name="Arial" size="26.0" />
                            </font>
@@ -131,6 +127,11 @@
                   </VBox>
                </children>
             </HBox>
+            <Button mnemonicParsing="false" onAction="#iniciarCombate" prefHeight="66.0" prefWidth="68.0" style="-fx-background-color: white; -fx-background-radius: 45px; -fx-border-radius: 45px; -fx-border-color: black;" text="Iniciar">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Button>
          </children>
       </VBox>
    </children>
