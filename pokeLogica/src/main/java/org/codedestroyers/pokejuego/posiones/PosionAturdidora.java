@@ -3,8 +3,8 @@ package org.codedestroyers.pokejuego.posiones;
 public class PosionAturdidora extends Posion {
     private final int tiempoAturdicion;
 
-    public PosionAturdidora(String nombre, int tiempoEfecto, int porcentajeDeDano, int tiempoAturdicion) {
-        super(nombre, tiempoEfecto, porcentajeDeDano * 2);
+    public PosionAturdidora(String nombre, String descripcion, int tiempoEfecto, int porcentajeDeDano, int tiempoAturdicion) {
+        super(nombre, descripcion, tiempoEfecto, porcentajeDeDano * 2);
         this.tiempoAturdicion = tiempoAturdicion;
     }
 

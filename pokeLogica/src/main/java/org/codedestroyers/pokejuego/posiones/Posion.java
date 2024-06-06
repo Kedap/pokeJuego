@@ -11,10 +11,11 @@ public abstract class Posion {
     protected int tiempoEfectuado;
     protected @Getter(AccessLevel.PUBLIC) boolean continuaEfecto;
 
-    public Posion(String nombre, int tiempoEfecto, int porcentajeDeDano) {
+    public Posion(String nombre, String descripcion,int tiempoEfecto, int porcentajeDeDano) {
         this.nombre = nombre;
         this.tiempoEfecto = tiempoEfecto;
         this.porcentajeDeDano = porcentajeDeDano;
+        this.descripcion = descripcion;
         continuaEfecto = true;
     }
 

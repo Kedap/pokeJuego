@@ -12,7 +12,7 @@ class PosionAturdidoraTest {
     @ParameterizedTest
     @CsvSource({"100.0,90.0,280.0", "50.0,50.0,100.0", "10.0,20.0,14.0"})
     void obtenerDanoNuevo(double danoNomral, double danoPosion, double danoEsperado) throws InterruptedException {
-        PosionAturdidora po = new PosionAturdidora("Posion Ordinaria", 1, (int) danoPosion, 30);
+        PosionAturdidora po = new PosionAturdidora("Posion Ordinaria", "", 1, (int) danoPosion, 30);
         assertEquals(po.obtenerDanoNuevo(danoNomral), danoEsperado);
     }
 
@@ -20,7 +20,7 @@ class PosionAturdidoraTest {
     @Timeout(5)
     @ValueSource(ints = {1, 2, 3})
     void checarTurnos(int tiempoEfecto) throws InterruptedException {
-        PosionAturdidora pa = new PosionAturdidora("Posion Ordinaria", tiempoEfecto, 2, 1);
+        PosionAturdidora pa = new PosionAturdidora("Posion Ordinaria", "", tiempoEfecto, 2, 1);
         int dano = 100;
         int i = 0;
         while (pa.isContinuaEfecto()) {

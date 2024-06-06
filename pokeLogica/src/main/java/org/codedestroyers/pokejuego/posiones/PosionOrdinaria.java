@@ -1,8 +1,8 @@
 package org.codedestroyers.pokejuego.posiones;
 
 public class PosionOrdinaria extends Posion {
-    public PosionOrdinaria(String nombre, int tiempoEfecto, int porcentajeDeDano) {
-        super(nombre, tiempoEfecto, porcentajeDeDano);
+    public PosionOrdinaria(String nombre, String descripcion, int tiempoEfecto, int porcentajeDeDano) {
+        super(nombre, descripcion, tiempoEfecto, porcentajeDeDano);
     }
 
     @Override
