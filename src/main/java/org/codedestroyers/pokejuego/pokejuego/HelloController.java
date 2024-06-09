@@ -73,7 +73,7 @@ public class HelloController {
     }
 
     private ClientConfig obtenerConfiguracionc() {
-        return new ClientConfig(HttpUrl.parse("https://pokeapi.co/api/v2/"), builder -> {
+        return new ClientConfig(HttpUrl.parse("http://localhost/api/v2/"), builder -> {
             builder.retryOnConnectionFailure(false);
             builder.connectTimeout(30, TimeUnit.SECONDS);
             builder.readTimeout(30, TimeUnit.SECONDS);
