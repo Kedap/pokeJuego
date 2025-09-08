@@ -15,7 +15,7 @@
             <HBox prefHeight="108.0" prefWidth="470.0" />
             <HBox alignment="CENTER" prefHeight="108.0" prefWidth="470.0">
                <children>
-                  <Button fx:id="ejecutarPosion1" disable="true" mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" style="-fx-background-color: whtie; -fx-border-color: black;" text="Tomar Posion" visible="false">
+                  <Button fx:id="ejecutarPosion1" disable="true" mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" text="Tomar Posion" visible="false">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>
@@ -81,7 +81,7 @@
             <HBox prefHeight="108.0" prefWidth="470.0" />
             <HBox alignment="CENTER" prefHeight="108.0" prefWidth="470.0">
                <children>
-                  <Button fx:id="ejecutarPosionDo" disable="true" mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" style="-fx-background-color: whtie; -fx-border-color: black;" text="Tomar Posion" visible="false">
+                  <Button fx:id="ejecutarPosionDo" disable="true" mnemonicParsing="false" prefHeight="67.0" prefWidth="345.0" text="Tomar Posion" visible="false">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>
